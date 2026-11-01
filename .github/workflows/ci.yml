@@ -25,5 +25,8 @@ jobs:
           pip install -r requirements.txt
 
       - name: Validate Python application
-        run: |
-          python -m py_compile app.py
+              - name: Run automated tests
+        run: python -m pytest -v
+
+      - name: Run automated tests
+        run: python -m pytest -v
