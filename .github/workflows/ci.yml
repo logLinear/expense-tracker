@@ -2,9 +2,9 @@ name: Expense Tracker CI
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
   pull_request:
-    branches: [ "main" ]
+    branches: ["main"]
 
 jobs:
   build:
@@ -25,8 +25,7 @@ jobs:
           pip install -r requirements.txt
 
       - name: Validate Python application
-              - name: Run automated tests
-        run: python -m pytest -v
+        run: python -m py_compile app.py
 
       - name: Run automated tests
         run: python -m pytest -v
